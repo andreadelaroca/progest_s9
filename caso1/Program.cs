@@ -10,7 +10,7 @@ class Program
         Console.WriteLine("2. Visualizar última acción");
         Console.WriteLine("3. Deshacer última acción");
         Console.WriteLine("4. Salir");
-        Console.Write("¿Qué desea hacer?");
+        Console.Write("Elija una opción: ");
         int opcion = Convert.ToInt32(Console.ReadLine());
 
         switch (opcion)
