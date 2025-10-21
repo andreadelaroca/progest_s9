@@ -2,7 +2,7 @@
 
 class Program
 {
-    public Stack<string> acciones = new Stack<string>();
+    public static Stack<string> acciones = new Stack<string>();
     static void Main()
     {
         Console.WriteLine("-----Menú de acciones-----");
@@ -37,7 +37,8 @@ class Program
     }
     static void AgregarAccion()
     {
-
+        Console.Write("Introduzca la acción: ");
+        acciones.Push(Console.ReadLine()!);
     }
     static void VisualizarAccion()
     {
