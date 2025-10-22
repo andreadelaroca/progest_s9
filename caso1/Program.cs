@@ -5,7 +5,6 @@ class Program
     public static Stack<string> acciones = new Stack<string>();
     static void Main()
     {
-  
         while (true)
         {
             Console.WriteLine("-----Menú de acciones-----");
@@ -14,8 +13,19 @@ class Program
             Console.WriteLine("3. Deshacer última acción");
             Console.WriteLine("4. Salir");
             Console.Write("Elija una opción: ");
-            int opcion = Convert.ToInt32(Console.ReadLine());
-        
+            int opcion;
+            while (true)
+            {
+                string? entrada = Console.ReadLine();
+                if (!int.TryParse(entrada, out opcion) || opcion < 1 || opcion > 4)
+                {
+                    Console.WriteLine("Opción incorrecta. Por favor ingrese un número entre 1 y 4.");
+                    Console.Write("Elija una opción: ");
+                    continue;
+                }
+                break;
+            }
+
             switch (opcion)
             {
                 case 1:
